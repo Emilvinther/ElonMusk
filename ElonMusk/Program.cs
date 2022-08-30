@@ -30,8 +30,8 @@ namespace ElonMusk
             Console.WriteLine("You have driven {0} meters", t.Distance);
             Console.WriteLine("You have {0}% battery left",t.Battery);
 
-            // Calls the method recharge, that recharge the car and shows battery %
-            t.Recharge();
+            // Asks the user if he wants to recharge
+            t.Choice();
 
             Console.WriteLine("You have {0}% battery left", t.Battery);
 

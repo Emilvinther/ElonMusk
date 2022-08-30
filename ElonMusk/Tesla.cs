@@ -17,14 +17,12 @@ namespace ElonMusk
         public string Colour
         {
             get { return colour; }
-            set { colour = value; }
         }
 
         // Property for Battery
         public int Battery
         {
             get { return battery; }
-            set { battery = value; }
         }
 
         // Property for Distance
@@ -59,6 +57,29 @@ namespace ElonMusk
         {
             battery = 100;
             Distance = 0;
+        }
+
+        public void Choice()
+        {
+            int choice;
+
+            if (battery < 100)
+            {
+                Console.WriteLine("Do you want to recharge 1 for yes, 2 for no");
+                choice = Int32.Parse(Console.ReadLine());
+                if (choice == 1)
+                {
+                    Recharge();
+                }
+                else
+                {
+                    Drive();
+                }
+            }
+            else 
+            {
+                Drive();
+            }
         }
 
     }
